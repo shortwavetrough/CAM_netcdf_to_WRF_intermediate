@@ -15,3 +15,17 @@ Note** - be sure the netcdf include and library locations are up to date.
 Note*** - debug compile flags include the following: -O0 -check all -traceback -fstack-protector -assume protect_parens -implicitnone -debug -gen-interfaces -check arg_temp_created -ftrapuv -g -traceback 
 
 (3) run the program: >a.out
+
+
+Outstanding issues
+==================
+(1) Metgrid complains about the starting latitude (=0) when in the program STARTLAT=lat(1). Setting STARTLAT equal to the number Metgrid expects, seems to solve this issue.*
+(2) Metgrid complains about numerous missing values in PSFC, PMSL, and PRES fields (all random points). Placing print statments in the program to output the values at these points may help to resolve this issue. Perhaps they are missing values, but Metgrid is not expecting them?
+
+==================
+Resolved *
+
+
+Future work
+===========
+Further modernizing of this code would be very beneficial. Use of modules would help greatly.
